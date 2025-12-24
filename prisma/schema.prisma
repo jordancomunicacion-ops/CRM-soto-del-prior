@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// --- CORE CRM MODELS ---
+
+model CustomerProfile {
+  id        String   @id @default(uuid())
+  email     String?  @unique
+  phone     String?
+  firstName String?
+  lastName  String?
+  
+  // Aggregated Stats
+  systemTags     String? // "HOTEL_GUEST", "RESTAURANT_DINER", "SHOP_BUYER"
+  totalSpend     Decimal @default(0)
+  lastInteraction DateTime?
+  
+  // Consent
+  consentEmail    Boolean @default(false)
+  consentWhatsApp Boolean @default(false)
+  
+  campaigns      CampaignLog[]
+  webVisits      WebVisit[]
+  sales          Sale[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model WebVisit {
+  id                String   @id @default(uuid())
+  sessionId         String
+  visitorId         String?
+  url               String
+  referrer          String?
+  userAgent         String?
+  duration          Int?    // seconds
+  customerProfileId String?
+  customerProfile   CustomerProfile? @relation(fields: [customerProfileId], references: [id])
+  timestamp         DateTime @default(now())
+}
+
+model Campaign {
+  id          String   @id @default(uuid())
+  name        String
+  type        String   // "EMAIL", "WHATSAPP"
+  status      String   // "DRAFT", "SCHEDULED", "SENT"
+  subject     String?
+  content     String   // HTML or Template
+  
+  sentCount   Int      @default(0)
+  createdAt   DateTime @default(now())
+  
+  logs        CampaignLog[]
+}
+
+model CampaignLog {
+  id          String   @id @default(uuid())
+  campaignId  String
+  campaign    Campaign @relation(fields: [campaignId], references: [id])
+  customerProfileId String
+  customerProfile CustomerProfile @relation(fields: [customerProfileId], references: [id])
+  
+  status      String   // "SENT", "OPENED", "CLICKED", "FAILED"
+  sentAt      DateTime @default(now())
+}
+
+// --- INTELLIGENCE & SALES ---
+
+// --- INTELLIGENCE & SALES ---
+
+model Sale {
+  id             String   @id @default(uuid())
+  source         String   // "TPV_RESTAURANT", "DELIVERY_PLATFORM" (Ordatic, Flipdish, etc.)
+  platformName   String?  // "Glovo", "Uber Eats", "Just Eat" (if Delivery)
+  
+  total          Decimal
+  currency       String   @default("EUR")
+  
+  customerProfileId String?
+  customerProfile   CustomerProfile? @relation(fields: [customerProfileId], references: [id])
+  
+  // Snapshot of weather at moment of sale (optional, for precise historical record)
+  weatherSnapshotJson String? // Stores { temp, condition } as JSON
+  
+  items          SaleItem[]
+  
+  timestamp      DateTime @default(now())
+  hour           Int      // 0-23
+}
+
+model SaleItem {
+  id        String   @id @default(uuid())
+  saleId    String
+  sale      Sale     @relation(fields: [saleId], references: [id])
+  
+  productName String
+  quantity    Int
+  unitPrice   Decimal
+  category    String?
+}
+
+// Independent Hourly Log (Cron Job will fill this)
+model HourlyWeather {
+  id             String   @id @default(uuid())
+  timestamp      DateTime @default(now())
+  hour           Int
+  
+  temperature    Decimal
+  condition      String   // "sunny", "rainy", "cloudy"
+  precipitation  Decimal  // mm
+  humidity       Decimal?
+  windSpeed      Decimal?
+  
+  @@index([timestamp])
+}
