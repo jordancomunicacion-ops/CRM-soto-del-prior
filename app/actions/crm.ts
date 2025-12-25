@@ -39,7 +39,7 @@ export async function getSalesStats() {
     const recentSales = await prisma.sale.findMany({
         take: 5,
         orderBy: { timestamp: 'desc' },
-        include: { weatherLog: true } // Assuming weatherLog relation exists or snapshot
+        include: { items: true } // Relation to items exists
     })
 
     return {

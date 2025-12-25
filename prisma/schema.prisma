@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
 }
 
 // --- CORE CRM MODELS ---
@@ -119,4 +119,68 @@ model HourlyWeather {
   windSpeed      Decimal?
   
   @@index([timestamp])
+}
+
+// --- SOCIAL ANALYTICS (PHASE 8) ---
+
+model SocialAccount {
+  id             String   @id @default(uuid())
+  provider       String   // "INSTAGRAM", "FACEBOOK", "TIKTOK", "LINKEDIN", "YOUTUBE"
+  platformId     String   // The ID on the platform (e.g. IG Business ID)
+  name           String   // Account Name / Handle
+  
+  accessToken    String
+  refreshToken   String?
+  tokenExpiresAt DateTime?
+  
+  contentItems   ContentItem[]
+  metrics        MetricTimeseries[]
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model ContentItem {
+  id              String   @id @default(uuid())
+  socialAccountId String
+  socialAccount   SocialAccount @relation(fields: [socialAccountId], references: [id])
+  
+  externalId      String   // ID of the post/video on the platform
+  type            String   // "IMAGE", "VIDEO", "CAROUSEL", "REEL", "STORY"
+  permalink       String?
+  thumbnail       String?
+  caption         String?
+  
+  publishedAt     DateTime
+  
+  metrics         MetricTimeseries[] // Metrics specific to this content
+  
+  // Future: Link to UnifiedCampaign
+  campaignId      String? 
+  // campaign     UnifiedCampaign? ...
+  
+  createdAt       DateTime @default(now())
+}
+
+model MetricTimeseries {
+  id              String   @id @default(uuid())
+  
+  // Context: Either Account-Level (Followers) or Content-Level (Likes on a Post)
+  socialAccountId String
+  socialAccount   SocialAccount @relation(fields: [socialAccountId], references: [id])
+  
+  contentItemId   String?
+  contentItem     ContentItem? @relation(fields: [contentItemId], references: [id])
+  
+  date            DateTime // Date of the record (Daily granularity)
+  metric          String   // "IMPRESSIONS", "REACH", "ENGAGEMENT", "FOLLOWERS", "CLICKS"
+  value           Decimal
+  
+  // Metadata for attribution
+  source          String?  // "ORGANIC", "PAID"
+  
+  createdAt       DateTime @default(now())
+  
+  @@index([socialAccountId, date])
+  @@index([contentItemId])
 }

@@ -18,8 +18,8 @@ export default async function CampaignsPage() {
         await createCampaign({
             name: formData.get('name') as string,
             type: formData.get('type') as string,
-            subject: formData.get('subject') as string,
-            content: formData.get('content') as string
+            subject: formData.get('subject') as string || 'Draft Subject',
+            content: formData.get('content') as string || 'Draft content...'
         })
     }
 
