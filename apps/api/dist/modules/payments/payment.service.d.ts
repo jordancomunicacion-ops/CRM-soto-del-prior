@@ -6,29 +6,7 @@ export declare class PaymentService {
     createCustomer(email: string, name: string): Promise<{
         id: string;
     }>;
-    savePaymentMethod(bookingId: string, paymentMethodId: string): Promise<{
-        id: string;
-        createdAt: Date;
-        updatedAt: Date;
-        date: Date;
-        guestName: string;
-        guestEmail: string | null;
-        guestPhone: string | null;
-        status: string;
-        stripeCustomerId: string | null;
-        stripePaymentMethodId: string | null;
-        pax: number;
-        channelId: string | null;
-        restaurantId: string;
-        duration: number;
-        tags: string | null;
-        notes: string | null;
-        origin: string;
-        smsSent: boolean;
-        emailSent: boolean;
-        idempotencyKey: string | null;
-        tableId: string | null;
-    }>;
+    savePaymentMethod(bookingId: string, paymentMethodId: string): Promise<any>;
     chargeNoShowFee(bookingId: string): Promise<{
         success: boolean;
         paymentIntent: {

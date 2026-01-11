@@ -1,0 +1,260 @@
+
+> api@0.0.1 build
+> nest build
+
+[96msrc/modules/booking/booking.service.ts[0m:[93m32[0m:[93m51[0m - [91merror[0m[90m TS2339: [0mProperty 'ratePlan' does not exist on type 'PrismaService'.
+
+[7m32[0m             const defaultPlan = await this.prisma.ratePlan.findFirst({
+[7m  [0m [91m                                                  ~~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m38[0m:[93m51[0m - [91merror[0m[90m TS2339: [0mProperty 'ratePlan' does not exist on type 'PrismaService'.
+
+[7m38[0m                 const anyPlan = await this.prisma.ratePlan.findFirst({ where: { hotelId: data.hotelId } });
+[7m  [0m [91m                                                  ~~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m51[0m:[93m17[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m51[0m                 ratePlanId,
+[7m  [0m [91m                ~~~~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m64[0m:[93m13[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m64[0m             ratePlanId,
+[7m  [0m [91m            ~~~~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m75[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'booking' does not exist on type 'PrismaService'.
+
+[7m75[0m         const booking = await this.prisma.booking.create({
+[7m  [0m [91m                                          ~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m136[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'booking' does not exist on type 'PrismaService'.
+
+[7m136[0m         return this.prisma.booking.findMany({
+[7m   [0m [91m                           ~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m148[0m:[93m45[0m - [91merror[0m[90m TS2339: [0mProperty 'roomType' does not exist on type 'PrismaService'.
+
+[7m148[0m         const roomTypes = await this.prisma.roomType.findMany({
+[7m   [0m [91m                                            ~~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m155[0m:[93m51[0m - [91merror[0m[90m TS2339: [0mProperty 'ratePlan' does not exist on type 'PrismaService'.
+
+[7m155[0m         const defaultRatePlan = await this.prisma.ratePlan.findFirst({
+[7m   [0m [91m                                                  ~~~~~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m189[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'room' does not exist on type 'PrismaService'.
+
+[7m189[0m         const allRooms = await this.prisma.room.findMany({
+[7m   [0m [91m                                           ~~~~[0m
+[96msrc/modules/booking/booking.service.ts[0m:[93m194[0m:[93m46[0m - [91merror[0m[90m TS2339: [0mProperty 'bookingRoom' does not exist on type 'PrismaService'.
+
+[7m194[0m             const isBusy = await this.prisma.bookingRoom.findFirst({
+[7m   [0m [91m                                             ~~~~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m25[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'iCalFeed' does not exist on type 'PrismaService'.
+
+[7m25[0m         return this.prisma.iCalFeed.findMany({ include: { roomType: true } });
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m29[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'iCalFeed' does not exist on type 'PrismaService'.
+
+[7m29[0m         return this.prisma.iCalFeed.create({ data });
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m33[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'iCalFeed' does not exist on type 'PrismaService'.
+
+[7m33[0m         const feeds = await this.prisma.iCalFeed.findMany({ where: { isActive: true }, include: { roomType: true } });
+[7m  [0m [91m                                        ~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m57[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'booking' does not exist on type 'PrismaService'.
+
+[7m57[0m                 const existing = await this.prisma.booking.findFirst({
+[7m  [0m [91m                                                   ~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m76[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'booking' does not exist on type 'PrismaService'.
+
+[7m76[0m                     await this.prisma.booking.create({
+[7m  [0m [91m                                      ~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m104[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'iCalFeed' does not exist on type 'PrismaService'.
+
+[7m104[0m             await this.prisma.iCalFeed.update({ where: { id: feed.id }, data: { lastSync: new Date() } });
+[7m   [0m [91m                              ~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m112[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'room' does not exist on type 'PrismaService'.
+
+[7m112[0m         const allRooms = await this.prisma.room.findMany({ where: { roomTypeId, isActive: true } });
+[7m   [0m [91m                                           ~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m114[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'bookingRoom' does not exist on type 'PrismaService'.
+
+[7m114[0m             const conflict = await this.prisma.bookingRoom.findFirst({
+[7m   [0m [91m                                               ~~~~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m134[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'channelMapping' does not exist on type 'PrismaService'.
+
+[7m134[0m         const mappings = await this.prisma.channelMapping.findMany({
+[7m   [0m [91m                                           ~~~~~~~~~~~~~~[0m
+[96msrc/modules/channel-manager/channel-manager.service.ts[0m:[93m158[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'booking' does not exist on type 'PrismaService'.
+
+[7m158[0m         const bookings = await this.prisma.booking.findMany({
+[7m   [0m [91m                                           ~~~~~~~[0m
+[96msrc/modules/config/widget-config.service.ts[0m:[93m9[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'widgetConfig' does not exist on type 'PrismaService'.
+
+[7m9[0m         return this.prisma.widgetConfig.findUnique({ where: { hotelId } });
+[7m [0m [91m                           ~~~~~~~~~~~~[0m
+[96msrc/modules/config/widget-config.service.ts[0m:[93m13[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'widgetConfig' does not exist on type 'PrismaService'.
+
+[7m13[0m         return this.prisma.widgetConfig.upsert({
+[7m  [0m [91m                           ~~~~~~~~~~~~[0m
+[96msrc/modules/global/global.controller.ts[0m:[93m11[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m11[0m             this.prisma.hotel.findMany({
+[7m  [0m [91m                        ~~~~~[0m
+[96msrc/modules/global/global.controller.ts[0m:[93m14[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'restaurant' does not exist on type 'PrismaService'.
+
+[7m14[0m             this.prisma.restaurant.findMany({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m12[0m:[93m46[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m12[0m         const hotelCount = await this.prisma.hotel.count();
+[7m  [0m [91m                                             ~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m27[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m27[0m         const existing = await this.prisma.hotel.count();
+[7m  [0m [91m                                           ~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m33[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m33[0m         const hotel = await this.prisma.hotel.create({
+[7m  [0m [91m                                        ~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m42[0m:[93m27[0m - [91merror[0m[90m TS2339: [0mProperty 'roomType' does not exist on type 'PrismaService'.
+
+[7m42[0m         await this.prisma.roomType.create({
+[7m  [0m [91m                          ~~~~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m56[0m:[93m27[0m - [91merror[0m[90m TS2339: [0mProperty 'roomType' does not exist on type 'PrismaService'.
+
+[7m56[0m         await this.prisma.roomType.create({
+[7m  [0m [91m                          ~~~~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m72[0m:[93m50[0m - [91merror[0m[90m TS2339: [0mProperty 'restaurant' does not exist on type 'PrismaService'.
+
+[7m72[0m             const restaurant = await this.prisma.restaurant.create({
+[7m  [0m [91m                                                 ~~~~~~~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m91[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'zone' does not exist on type 'PrismaService'.
+
+[7m91[0m                 const zone = await this.prisma.zone.create({
+[7m  [0m [91m                                               ~~~~[0m
+[96msrc/modules/installer/installer.service.ts[0m:[93m108[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'table' does not exist on type 'PrismaService'.
+
+[7m108[0m                 await this.prisma.table.createMany({ data: tables });
+[7m   [0m [91m                                  ~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m28[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'resBooking' does not exist on type 'PrismaService'.
+
+[7m28[0m         const booking = await this.prisma.resBooking.findUnique({ where: { id: bookingId } });
+[7m  [0m [91m                                          ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m39[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'resBooking' does not exist on type 'PrismaService'.
+
+[7m39[0m         return this.prisma.resBooking.update({
+[7m  [0m [91m                           ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m49[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'resBooking' does not exist on type 'PrismaService'.
+
+[7m49[0m         const booking = await this.prisma.resBooking.findUnique({ where: { id: bookingId } });
+[7m  [0m [91m                                          ~~~~~~~~~~[0m
+[96msrc/modules/property/property.service.ts[0m:[93m10[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m10[0m         return this.prisma.hotel.create({ data });
+[7m  [0m [91m                           ~~~~~[0m
+[96msrc/modules/property/property.service.ts[0m:[93m14[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m14[0m         return this.prisma.hotel.findMany();
+[7m  [0m [91m                           ~~~~~[0m
+[96msrc/modules/property/property.service.ts[0m:[93m18[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'hotel' does not exist on type 'PrismaService'.
+
+[7m18[0m         return this.prisma.hotel.findUnique({
+[7m  [0m [91m                           ~~~~~[0m
+[96msrc/modules/property/property.service.ts[0m:[93m26[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'roomType' does not exist on type 'PrismaService'.
+
+[7m26[0m         return this.prisma.roomType.create({
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/modules/property/property.service.ts[0m:[93m35[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'roomType' does not exist on type 'PrismaService'.
+
+[7m35[0m         return this.prisma.roomType.findMany({
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/modules/property/property.service.ts[0m:[93m43[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'room' does not exist on type 'PrismaService'.
+
+[7m43[0m         return this.prisma.room.create({
+[7m  [0m [91m                           ~~~~[0m
+[96msrc/modules/rates/availability.service.ts[0m:[93m30[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'restriction' does not exist on type 'PrismaService'.
+
+[7m30[0m             const restrictions = await this.prisma.restriction.findMany({
+[7m  [0m [91m                                                   ~~~~~~~~~~~[0m
+[96msrc/modules/rates/availability.service.ts[0m:[93m71[0m:[93m50[0m - [91merror[0m[90m TS2339: [0mProperty 'room' does not exist on type 'PrismaService'.
+
+[7m71[0m             const roomsTotal = await this.prisma.room.count({
+[7m  [0m [91m                                                 ~~~~[0m
+[96msrc/modules/rates/availability.service.ts[0m:[93m75[0m:[93m53[0m - [91merror[0m[90m TS2339: [0mProperty 'bookingRoom' does not exist on type 'PrismaService'.
+
+[7m75[0m             const bookingsCount = await this.prisma.bookingRoom.count({
+[7m  [0m [91m                                                    ~~~~~~~~~~~[0m
+[96msrc/modules/rates/availability.service.ts[0m:[93m95[0m:[93m50[0m - [91merror[0m[90m TS2339: [0mProperty 'restriction' does not exist on type 'PrismaService'.
+
+[7m95[0m         const ctdRestriction = await this.prisma.restriction.findFirst({
+[7m  [0m [91m                                                 ~~~~~~~~~~~[0m
+[96msrc/modules/rates/rates.controller.ts[0m:[93m16[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'ratePlan' does not exist on type 'PrismaService'.
+
+[7m16[0m         return this.prisma.ratePlan.findMany({
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/modules/rates/rates.controller.ts[0m:[93m23[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'ratePlan' does not exist on type 'PrismaService'.
+
+[7m23[0m         return this.prisma.ratePlan.create({ data: body });
+[7m  [0m [91m                           ~~~~~~~~[0m
+[96msrc/modules/rates/rates.service.ts[0m:[93m22[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'roomType' does not exist on type 'PrismaService'.
+
+[7m22[0m         const roomType = await this.prisma.roomType.findUnique({ where: { id: roomTypeId } });
+[7m  [0m [91m                                           ~~~~~~~~[0m
+[96msrc/modules/rates/rates.service.ts[0m:[93m25[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'ratePlan' does not exist on type 'PrismaService'.
+
+[7m25[0m         const ratePlan = await this.prisma.ratePlan.findUnique({ where: { id: ratePlanId } });
+[7m  [0m [91m                                           ~~~~~~~~[0m
+[96msrc/modules/rates/rates.service.ts[0m:[93m28[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'season' does not exist on type 'PrismaService'.
+
+[7m28[0m         const seasons = await this.prisma.season.findMany({ where: { hotelId } });
+[7m  [0m [91m                                          ~~~~~~[0m
+[96msrc/modules/rates/rates.service.ts[0m:[93m42[0m:[93m50[0m - [91merror[0m[90m TS2339: [0mProperty 'dailyPrice' does not exist on type 'PrismaService'.
+
+[7m42[0m             const dailyPrice = await this.prisma.dailyPrice.findFirst({
+[7m  [0m [91m                                                 ~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m20[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'createZone' does not exist on type 'RestaurantService'.
+
+[7m20[0m         return this.service.createZone(body.restaurantId, body.name);
+[7m  [0m [91m                            ~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m25[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'createTable' does not exist on type 'RestaurantService'.
+
+[7m25[0m         return this.service.createTable(body.zoneId, body.name, body.capacity);
+[7m  [0m [91m                            ~~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m30[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'getTables' does not exist on type 'RestaurantService'.
+
+[7m30[0m         return this.service.getTables(id);
+[7m  [0m [91m                            ~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m35[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'syncZones' does not exist on type 'RestaurantService'.
+
+[7m35[0m         return this.service.syncZones(id, body);
+[7m  [0m [91m                            ~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m40[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'syncTables' does not exist on type 'RestaurantService'.
+
+[7m40[0m         return this.service.syncTables(id, body);
+[7m  [0m [91m                            ~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m46[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'getBookings' does not exist on type 'RestaurantService'.
+
+[7m46[0m         return this.service.getBookings(id, date);
+[7m  [0m [91m                            ~~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m51[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'createBooking' does not exist on type 'RestaurantService'.
+
+[7m51[0m         return this.service.createBooking(body);
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m69[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'createPublicReservation' does not exist on type 'RestaurantService'.
+
+[7m69[0m         return this.service.createPublicReservation(body);
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m74[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'confirmReservation' does not exist on type 'RestaurantService'.
+
+[7m74[0m         return this.service.confirmReservation(id);
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/restaurant/restaurant.controller.ts[0m:[93m79[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'cancelReservation' does not exist on type 'RestaurantService'.
+
+[7m79[0m         return this.service.cancelReservation(id);
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~[0m
+
+Found 61 error(s).
+
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path C:\Users\Carlos\SOTOdelPRIOR\Campañas marketing SOTOdelPRIOR\apps\api
+npm error workspace api@0.0.1
+npm error location C:\Users\Carlos\SOTOdelPRIOR\Campañas marketing SOTOdelPRIOR\apps\api
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c nest build

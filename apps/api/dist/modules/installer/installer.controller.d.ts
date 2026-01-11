@@ -18,7 +18,7 @@ export declare class InstallerController {
         }[];
     }): Promise<{
         success: boolean;
-        hotelId: string;
+        hotelId: any;
         message: string;
     }>;
 }

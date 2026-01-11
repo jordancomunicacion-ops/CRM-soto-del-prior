@@ -2,7 +2,7 @@ import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class RestaurantService {
-    private readonly ENGINE_URL = 'http://localhost:4007';
+    private readonly ENGINE_URL = process.env.ENGINE_URL || 'http://localhost:4007';
 
     constructor() { }
 
@@ -27,7 +27,7 @@ export class RestaurantService {
         }
     }
 
-    // ... (Proxy Methods)
+    // --- Proxy Methods ---
 
     async getRestaurants() {
         return this.callEngine('GET', '/restaurant');
@@ -37,7 +37,48 @@ export class RestaurantService {
         return this.callEngine('POST', '/restaurant', data);
     }
 
-    // ... (rest of the file as viewed, up to addToWaitlist)
+    // --- Zones ---
+    async syncZones(restaurantId: string, zones: any[]) {
+        return this.callEngine('POST', `/restaurant/${restaurantId}/zones/sync`, zones);
+    }
+
+    async createZone(restaurantId: string, name: string) {
+        return this.callEngine('POST', '/restaurant/zones', { restaurantId, name });
+    }
+
+    // --- Tables ---
+    async syncTables(zoneId: string, tables: any[]) {
+        return this.callEngine('POST', `/restaurant/zones/${zoneId}/tables/sync`, tables);
+    }
+
+    async getTables(restaurantId: string) {
+        return this.callEngine('GET', `/restaurant/${restaurantId}/tables`);
+    }
+
+    async createTable(zoneId: string, name: string, capacity: number) {
+        return this.callEngine('POST', '/restaurant/tables', { zoneId, name, capacity });
+    }
+
+    // --- Bookings (Public & Internal) ---
+    async createPublicReservation(data: any) {
+        return this.callEngine('POST', '/restaurant/public/reservation', data);
+    }
+
+    async confirmReservation(id: string) {
+        return this.callEngine('POST', `/restaurant/reservation/${id}/confirm`);
+    }
+
+    async cancelReservation(id: string) {
+        return this.callEngine('POST', `/restaurant/reservation/${id}/cancel`);
+    }
+
+    async getBookings(restaurantId: string, date: string) {
+        return this.callEngine('GET', `/restaurant/${restaurantId}/bookings?date=${date}`);
+    }
+
+    async createBooking(data: any) {
+        return this.callEngine('POST', '/restaurant/bookings', data);
+    }
 
     // --- Waitlist ---
     async getWaitlist(restaurantId: string) {

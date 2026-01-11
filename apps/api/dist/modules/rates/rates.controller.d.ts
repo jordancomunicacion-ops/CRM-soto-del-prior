@@ -6,28 +6,8 @@ export declare class RatesController {
     private readonly availabilityService;
     private readonly prisma;
     constructor(ratesService: RatesService, availabilityService: AvailabilityService, prisma: PrismaService);
-    getRatePlans(hotelId: string): Promise<{
-        id: string;
-        name: string;
-        description: string | null;
-        hotelId: string;
-        isDefault: boolean;
-        cancellationPolicy: string | null;
-        mealsIncluded: string | null;
-        requireCreditCard: boolean;
-        noShowFee: import("@prisma/client/runtime/library").Decimal;
-    }[]>;
-    createRatePlan(body: any): Promise<{
-        id: string;
-        name: string;
-        description: string | null;
-        hotelId: string;
-        isDefault: boolean;
-        cancellationPolicy: string | null;
-        mealsIncluded: string | null;
-        requireCreditCard: boolean;
-        noShowFee: import("@prisma/client/runtime/library").Decimal;
-    }>;
+    getRatePlans(hotelId: string): Promise<any>;
+    createRatePlan(body: any): Promise<any>;
     updatePrices(body: {
         hotelId: string;
         ratePlanId: string;
