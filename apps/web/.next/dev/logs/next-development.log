@@ -1,9 +1,1 @@
-[00:00:07.506] Server  LOG     ✓ Ready in 6.5s
-[00:46:25.093] Server  LOG     ○ Compiling / ...
-[00:46:41.078] Server  LOG     ○ Compiling /crm ...
-[00:46:42.211] Server  LOG     [dotenv@17.2.3] injecting env (0) from .env.local -- tip: ⚙️  enable debug logging with { debug: true }
-[00:46:42.486] Server  LOG     prisma:query "SELECT `main`.`CustomerProfile`.`id`, `main`.`CustomerProfile`.`email`, `main`.`CustomerProfile`.`phone`, `main`.`CustomerProfile`.`firstName`, `main`.`CustomerProfile`.`lastName`, `main`.`CustomerProfile`.`systemTags`, `main`.`CustomerProfile`.`totalSpend`, `main`.`CustomerProfile`.`lastInteraction`, `main`.`CustomerProfile`.`consentEmail`, `main`.`CustomerProfile`.`consentWhatsApp`, `main`.`CustomerProfile`.`createdAt`, `main`.`CustomerProfile`.`updatedAt` FROM `main`.`CustomerProfile` WHERE 1=1 ORDER BY `main`.`CustomerProfile`.`updatedAt` DESC LIMIT ? OFFSET ?"
-[00:46:42.505] Server  LOG     prisma:query "SELECT SUM(`total`) FROM (SELECT `main`.`Sale`.`total` FROM `main`.`Sale` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:46:42.517] Server  LOG     prisma:query "SELECT `main`.`Sale`.`id`, `main`.`Sale`.`source`, `main`.`Sale`.`platformName`, `main`.`Sale`.`total`, `main`.`Sale`.`currency`, `main`.`Sale`.`customerProfileId`, `main`.`Sale`.`weatherSnapshotJson`, `main`.`Sale`.`timestamp`, `main`.`Sale`.`hour` FROM `main`.`Sale` WHERE 1=1 ORDER BY `main`.`Sale`.`timestamp` DESC LIMIT ? OFFSET ?"
-[00:46:42.532] Server  LOG     prisma:query "SELECT SUM(`main`.`Sale`.`total`), `main`.`Sale`.`source` FROM `main`.`Sale` WHERE 1=1 GROUP BY `main`.`Sale`.`source` LIMIT ? OFFSET ?"
-[00:46:43.885] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.358] Server  LOG     ✓ Ready in 5.6s

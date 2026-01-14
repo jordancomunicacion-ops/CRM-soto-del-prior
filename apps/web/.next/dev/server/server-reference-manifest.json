@@ -1,58 +1,5 @@
 {
-  "node": {
-    "0074386c9056670121732dd898d48b9f5eb4991060": {
-      "workers": {
-        "app/crm/page": {
-          "moduleId": "(rsc)/../../node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%2C%5B%7B%22id%22%3A%220074386c9056670121732dd898d48b9f5eb4991060%22%2C%22exportedName%22%3A%22getCampaigns%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a1f2503befe91c81bf95fc265b9608a2b7935559%22%2C%22exportedName%22%3A%22getProfiles%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a243deeebd14b9dd6fc7aabcb99f28daf49fedb3%22%2C%22exportedName%22%3A%22getSalesStats%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2240fa41d48ab6d61554d662f94b14575a267649caa8%22%2C%22exportedName%22%3A%22createCampaign%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/crm/page": "rsc"
-      },
-      "filename": "../c:\\Users\\Carlos\\SOTOdelPRIOR\\Campañas marketing SOTOdelPRIOR\\apps\\web\\app\\actions\\crm.ts",
-      "exportedName": "getCampaigns"
-    },
-    "00a1f2503befe91c81bf95fc265b9608a2b7935559": {
-      "workers": {
-        "app/crm/page": {
-          "moduleId": "(rsc)/../../node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%2C%5B%7B%22id%22%3A%220074386c9056670121732dd898d48b9f5eb4991060%22%2C%22exportedName%22%3A%22getCampaigns%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a1f2503befe91c81bf95fc265b9608a2b7935559%22%2C%22exportedName%22%3A%22getProfiles%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a243deeebd14b9dd6fc7aabcb99f28daf49fedb3%22%2C%22exportedName%22%3A%22getSalesStats%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2240fa41d48ab6d61554d662f94b14575a267649caa8%22%2C%22exportedName%22%3A%22createCampaign%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/crm/page": "rsc"
-      },
-      "filename": "../c:\\Users\\Carlos\\SOTOdelPRIOR\\Campañas marketing SOTOdelPRIOR\\apps\\web\\app\\actions\\crm.ts",
-      "exportedName": "getProfiles"
-    },
-    "00a243deeebd14b9dd6fc7aabcb99f28daf49fedb3": {
-      "workers": {
-        "app/crm/page": {
-          "moduleId": "(rsc)/../../node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%2C%5B%7B%22id%22%3A%220074386c9056670121732dd898d48b9f5eb4991060%22%2C%22exportedName%22%3A%22getCampaigns%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a1f2503befe91c81bf95fc265b9608a2b7935559%22%2C%22exportedName%22%3A%22getProfiles%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a243deeebd14b9dd6fc7aabcb99f28daf49fedb3%22%2C%22exportedName%22%3A%22getSalesStats%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2240fa41d48ab6d61554d662f94b14575a267649caa8%22%2C%22exportedName%22%3A%22createCampaign%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/crm/page": "rsc"
-      },
-      "filename": "../c:\\Users\\Carlos\\SOTOdelPRIOR\\Campañas marketing SOTOdelPRIOR\\apps\\web\\app\\actions\\crm.ts",
-      "exportedName": "getSalesStats"
-    },
-    "40fa41d48ab6d61554d662f94b14575a267649caa8": {
-      "workers": {
-        "app/crm/page": {
-          "moduleId": "(rsc)/../../node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22c%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%2C%5B%7B%22id%22%3A%220074386c9056670121732dd898d48b9f5eb4991060%22%2C%22exportedName%22%3A%22getCampaigns%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a1f2503befe91c81bf95fc265b9608a2b7935559%22%2C%22exportedName%22%3A%22getProfiles%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2200a243deeebd14b9dd6fc7aabcb99f28daf49fedb3%22%2C%22exportedName%22%3A%22getSalesStats%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%2C%7B%22id%22%3A%2240fa41d48ab6d61554d662f94b14575a267649caa8%22%2C%22exportedName%22%3A%22createCampaign%22%2C%22filename%22%3A%22..%2Fc%3A%5C%5CUsers%5C%5CCarlos%5C%5CSOTOdelPRIOR%5C%5CCampa%C3%B1as%20marketing%20SOTOdelPRIOR%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Cactions%5C%5Ccrm.ts%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/crm/page": "rsc"
-      },
-      "filename": "../c:\\Users\\Carlos\\SOTOdelPRIOR\\Campañas marketing SOTOdelPRIOR\\apps\\web\\app\\actions\\crm.ts",
-      "exportedName": "createCampaign"
-    }
-  },
+  "node": {},
   "edge": {},
   "encryptionKey": "zIJ3h2fm2OOfOsXtZsTLCyWSHyvvMkH5L6TlV64AYPU="
 }
